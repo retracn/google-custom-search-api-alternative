@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "google-custom-search-api": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@apify/actors-mcp-server",
+        "--tools",
+        "automationnation/google-custom-search-api"
+      ],
+      "env": {
+        "APIFY_TOKEN": "YOUR_APIFY_TOKEN"
+      }
+    }
+  }
+}
