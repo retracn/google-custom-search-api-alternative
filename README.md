@@ -11,7 +11,8 @@ Google Custom Search API Alternative is an Apify Actor that replaces Google's Cu
 - Drop-in endpoint: replace https://www.googleapis.com/customsearch/v1 with https://automationnation--google-custom-search-api.apify.actor/customsearch/v1 and send your Apify token (token=… or Authorization: Bearer) instead of key=.
 - Same parameters: q, num, start, gl, hl, lr, cr, safe, dateRestrict, siteSearch, exactTerms, excludeTerms, orTerms, fileType and searchType=image with its image filters; cx is accepted and ignored.
 - Same JSON: kind, queries.request and nextPage, searchInformation and items[] with title, htmlTitle, link, displayLink, snippet, htmlSnippet and formattedUrl (image items add mime and image.contextLink, width, height, byteSize, thumbnailLink).
-- Differences: it searches the whole web (pass site lists as siteSearch or site: operators), totalResults is a lower bound, there is no pagemap, and a request takes about 5–15 seconds.
+- Web searches use Google's "Web" results view: ten plain results per page without the AI Overview, ads or video and forum boxes, close to what the API returned.
+- Differences: it searches the whole web (pass site lists as siteSearch or site: operators), totalResults is a lower bound, there is no pagemap, and a request takes about 4–10 seconds.
 - Price: $5 per 1,000 searches of up to 10 results, the price Google charged; searches with no results are free and there is no daily cap.
 
 ## Use it as a drop-in Custom Search JSON API
